@@ -1,0 +1,21 @@
+<div class="container">    
+    <p>
+     <%= @product.name %>
+    </p>
+    <p>
+     <%= @product.price %>
+    </p>
+    <p>
+     <%= @product.product_category_id %>
+    </p>
+    <p>
+     <%= image_tag @product.image,:class=>'img'%>
+    </p>
+    <p>
+     <%= @product.description %>
+    </p>
+    <p>
+      <%= link_to 'Back', products_path %>
+    </p>
+
+</div>

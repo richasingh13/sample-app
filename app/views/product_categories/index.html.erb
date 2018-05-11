@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row"> 
+    <div class="col-6">
+      
+      <table class="table-bordered table">
+        <thead class="thead-dark">
+          <tr>
+            <th>product_categories</th>
+            
+          </tr>
+          <% @product_categories.each do |product_category| %>
+          <tr>
+            <td><%= product_category.name %></td>
+            <td><%= link_to 'Show', product_category_path(product_category) %></td>
+            <td><%= link_to 'Edit', edit_product_category_path(product_category) %></td>
+            <td><%= link_to 'Destroy', product_category_path(product_category),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </thead>
+      </table>
+            <td><%= link_to 'new', new_product_category_path, style: "button", class: "btn btn-info" %></td>
+    </div>
+  </div> 
+</div>
+
